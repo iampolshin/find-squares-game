@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'MinecraftFont';
+    src: url('fonts/minecraft.ttf');
+}
+
+body {
+    font-family: 'MinecraftFont', monospace;
+    margin: 0;
+    padding: 1vh;
+    background-color: #1c1c1c;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+}
+
+#main-content,
+#authorization-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#authorization-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#username {
+    width: 11vw;
+    padding: 0.5vh;
+    font-size: 1vw;
+    margin-top: 1vh;
+    font-family: 'MinecraftFont', monospace;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+#game-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.square,
+.game-square {
+    display: grid;
+    gap: 0.2vw;
+    border: 0.5vh solid #333;
+    border-radius: 2%;
+    cursor: pointer;
+    margin: 2vh;
+}
+
+.cell,
+.game-cell {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: var(--cell-color);
+}
+
+#level-buttons,
+start-game-button {
+    margin-bottom: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#level-buttons button.disabled-button {
+    background-color: #666;
+    color: #999;
+    cursor: not-allowed;
+}
+
+#level-buttons button {
+    background-color: #4caf50;
+    color: white;
+    padding: 2vh 4vw;
+    font-size: 2vw;
+    font-family: 'MinecraftFont', monospace;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#level-buttons button:hover {
+    background-color: #45a049;
+}
+
+#start-game-button,
+.back-to-menu-button {
+    color: white;
+    padding: 1vh 2vw;
+    font-size: 1vw;
+    font-family: 'MinecraftFont', monospace;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1vh;
+}
+
+#start-game-button {
+    background-color: #4caf50;
+}
+
+#start-game-button:hover {
+    background-color: #45a049;
+}
+
+.back-to-menu-button {
+    background-color: #ff6f61;
+}
+
+.back-to-menu-button:hover {
+    background-color: #d14c41;
+}
+
+#stats-container {
+    text-align: center;
+}
+
+.stats-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+#stats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#stats-table th,
+#stats-table td {
+    padding: 1vh;
+    border: 0.05vh solid #ddd;
+}
+
+#stats-table caption {
+    padding: 1vh;
+    font-size: 2vw;
+    font-family: 'MinecraftFont', monospace;
+}
+
+.decrease-effect {
+    transform: scale(0.5);
+}
+
+.increase-effect {
+    transform: scale(1.15);
+}
+
+.stagger-effect {
+    animation: staggerAnimation 0.5s infinite;
+}
+
+.glow-green {
+    animation: glowGreenAnimation 0.5s ease-out;
+}
+
+.glow-red {
+    animation: glowRedAnimation 0.5s ease-out;
+}
+
+@keyframes glowGreenAnimation {
+    0% {
+        box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 10px 10px rgba(0, 255, 0, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.3);
+    }
+}
+
+@keyframes glowRedAnimation {
+    0% {
+        box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 10px 10px rgba(255, 0, 0, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.3);
+    }
+}
+
+@keyframes staggerAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

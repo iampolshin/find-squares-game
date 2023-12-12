@@ -1,0 +1,118 @@
+{
+    "1": {
+        "timer": 20,
+        "maxAttempts": 3,
+        "steps": [
+            {
+                "squaresCount": 2,
+                "size": 2,
+                "colorCount": 2,
+                "pointsForCorrectAnswer": 1,
+                "penaltyForIncorrectAnswer": 1,
+                "effects": []
+            },
+            {
+                "squaresCount": 3,
+                "size": 2,
+                "colorCount": 3,
+                "pointsForCorrectAnswer": 1,
+                "penaltyForIncorrectAnswer": 2,
+                "effects": [
+                    "increase"
+                ]
+            },
+            {
+                "squaresCount": 4,
+                "size": 3,
+                "colorCount": 3,
+                "pointsForCorrectAnswer": 1,
+                "penaltyForIncorrectAnswer": 3,
+                "effects": [
+                    "stagger",
+                    "decrease"
+                ]
+            }
+        ]
+    },
+    "2": {
+        "timer": 15,
+        "maxAttempts": 2,
+        "steps": [
+            {
+                "squaresCount": 4,
+                "size": 3,
+                "colorCount": 5,
+                "pointsForCorrectAnswer": 2,
+                "penaltyForIncorrectAnswer": 4,
+                "effects": [
+                    "rotate"
+                ]
+            },
+            {
+                "squaresCount": 5,
+                "size": 4,
+                "colorCount": 5,
+                "pointsForCorrectAnswer": 2,
+                "penaltyForIncorrectAnswer": 5,
+                "effects": [
+                    "decrease",
+                    "stagger",
+                    "increase"
+                ]
+            },
+            {
+                "squaresCount": 6,
+                "size": 4,
+                "colorCount": 5,
+                "pointsForCorrectAnswer": 2,
+                "penaltyForIncorrectAnswer": 6,
+                "effects": [
+                    "rotate",
+                    "increase"
+                ]
+            }
+        ]
+    },
+    "3": {
+        "timer": 10,
+        "maxAttempts": 1,
+        "steps": [
+            {
+                "squaresCount": 6,
+                "size": 4,
+                "colorCount": 9,
+                "pointsForCorrectAnswer": 3,
+                "penaltyForIncorrectAnswer": 7,
+                "effects": [
+                    "decrease",
+                    "increase"
+                ]
+            },
+            {
+                "squaresCount": 7,
+                "size": 4,
+                "colorCount": 4,
+                "pointsForCorrectAnswer": 3,
+                "penaltyForIncorrectAnswer": 8,
+                "effects": [
+                    "decrease",
+                    "increase",
+                    "stagger"
+                ]
+            },
+            {
+                "squaresCount": 8,
+                "size": 5,
+                "colorCount": 9,
+                "pointsForCorrectAnswer": 3,
+                "penaltyForIncorrectAnswer": 9,
+                "effects": [
+                    "rotate",
+                    "decrease",
+                    "increase",
+                    "stagger"
+                ]
+            }
+        ]
+    }
+}
