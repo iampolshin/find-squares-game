@@ -1,3 +1,6 @@
+import './styles.css';
+import settings from './settings.json';
+
 const Colors = {
     RED: 'red',
     ORANGE: 'orange',
@@ -65,8 +68,6 @@ let maxAttempts = 0;
 let currentAttempts = 0;
 
 async function loadSettings() {
-    const response = await fetch('settings.json');
-    const settings = await response.json();
     return settings;
 }
 
@@ -423,3 +424,6 @@ function applyEffect(square, effects) {
         }
     });
 }
+
+window.startGame = startGame;
+window.backToMenu = backToMenu;
